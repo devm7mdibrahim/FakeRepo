@@ -1,4 +1,4 @@
-package com.devm7mdibrahim.fakeproject.ui;
+package com.devm7mdibrahim.fakeproject.ui.main;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -40,5 +40,17 @@ public class PostsRepository {
                 }));
 
         return postsLiveData;
+    }
+
+    public void addPost(){
+
+    }
+
+    public void removePost(){
+
+    }
+
+    public void editPost(){
+
     }
 }

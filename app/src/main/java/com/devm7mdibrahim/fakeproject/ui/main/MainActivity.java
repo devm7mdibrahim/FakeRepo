@@ -1,4 +1,4 @@
-package com.devm7mdibrahim.fakeproject.ui;
+package com.devm7mdibrahim.fakeproject.ui.main;
 
 import android.os.Bundle;
 import android.view.View;
@@ -33,18 +33,18 @@ public class MainActivity extends AppCompatActivity {
                 .observe(this, response -> {
                     switch (response.status) {
                         case LOADING: {
-                            showProgress(View.VISIBLE);
+                            showProgressBar(View.VISIBLE);
                             showDataTV(View.GONE);
                             break;
                         }
                         case SUCCESS: {
-                            showProgress(View.GONE);
+                            showProgressBar(View.GONE);
                             showDataTV(View.VISIBLE);
                             displayData(response.data.get(0).getTitle());
                             break;
                         }
                         case ERROR: {
-                            showProgress(View.GONE);
+                            showProgressBar(View.GONE);
                             showDataTV(View.VISIBLE);
                             displayData(response.message);
                             break;
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void showProgress(int visibility) {
+    private void showProgressBar(int visibility) {
         binding.progressBar.setVisibility(visibility);
     }
 

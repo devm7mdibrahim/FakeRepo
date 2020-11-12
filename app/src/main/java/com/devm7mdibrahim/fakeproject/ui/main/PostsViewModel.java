@@ -1,4 +1,4 @@
-package com.devm7mdibrahim.fakeproject.ui;
+package com.devm7mdibrahim.fakeproject.ui.main;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
